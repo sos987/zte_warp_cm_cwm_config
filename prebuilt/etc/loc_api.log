@@ -1,0 +1,16 @@
+Using INI file: /etc/loc_parameter.ini
+PARAM use_logcat = 1
+PARAM event_mask = 65535
+PARAM nmea_sentence_mask = 31
+PARAM engine_lock = 0
+PARAM operation_mode = 4
+PARAM fix_session_type = 0
+PARAM time_between_fixes = 60
+PARAM accuracy_threshold = 255
+PARAM fix_timeout = 60
+PARAM enable_auto_download = 1
+PARAM auto_download_period = 1
+PARAM xtra_server_addr = 216.187.118.37
+PARAM data_request_reply = 0
+PARAM umts_profile_number = 0
+PARAM apn_name = 
