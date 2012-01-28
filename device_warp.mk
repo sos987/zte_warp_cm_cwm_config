@@ -41,6 +41,11 @@ PRODUCT_PACKAGES += \
     abtfilt \
     dexpreopt
 
+#audio
+PRODUCT_COPY_FILES+= \
+    device/zte/warp/prebuilt/lib/libaudio.so:system/lib/libaudio.so \
+    device/zte/warp/prebuilt/lib/libaudiopolicy.so:system/lib/libaudiopolicy.so
+
 # Hardware properties
 PRODUCT_COPY_FILES += \
     frameworks/base/data/etc/handheld_core_hardware.xml:system/etc/permissions/handheld_core_hardware.xml \
@@ -54,6 +59,12 @@ PRODUCT_COPY_FILES += \
 
 # Board-specific init
 PRODUCT_COPY_FILES += \
+    device/zte/warp/boot/sbin/diagftmtest:/root/sbin/diagftmtest\
+    device/zte/warp/boot/sbin/hci_qcomm_init:/root/sbin/hci_qcomm_init\
+    device/zte/warp/boot/sbin/iwmulticall:/root/sbin/iwmulticall\
+    device/zte/warp/boot/sbin/iwpriv:/root/sbin/iwpriv\
+    device/zte/warp/boot/sbin/ptt_socket_app:/root/sbin/ptt_socket_app\
+    device/zte/warp/boot/sbin/rmt_storage_recovery:/root/sbin/rmt_storage_recovery\
     device/zte/warp/boot/ueventd.rc:root/ueventd.rc \
     device/zte/warp/boot/init.arthur.rc:root/init.arthur.rc
 
@@ -87,10 +98,7 @@ PRODUCT_COPY_FILES += \
     device/zte/warp/prebuilt/lib/libmmipl.so:system/lib/libmmipl.so \
     device/zte/warp/prebuilt/lib/libmmjpeg.so:system/lib/libmmjpeg.so
 
-#audio
-PRODUCT_COPY_FILES+= \
-    device/zte/warp/prebuilt/lib/libaudio.so:system/lib/libaudio.so \
-    device/zte/warp/prebuilt/lib/libaudiopolicy.so:system/lib/libaudiopolicy.so
+
 
 #Camera
 PRODUCT_COPY_FILES+= \

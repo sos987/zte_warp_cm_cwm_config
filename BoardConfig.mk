@@ -17,6 +17,8 @@ BOARD_HAVE_BLUETOOTH := true
 WIFI_DRIVER_MODULE_PATH     := /system/lib/modules/libra.ko
 WIFI_DRIVER_MODULE_NAME     := libra
 
+
+#android optimization (odexing)
 WITH_JIT := true
 ENABLE_JSC_JIT := true
 
@@ -82,5 +84,6 @@ TARGET_USERIMAGES_USE_EXT4 := true
 
 # USB
 BOARD_USE_USB_MASS_STORAGE_SWITCH := true
-#TARGET_USE_CUSTOM_LUN_FILE_PATH := "/sys/devices/platform/usb_mass_storage/lun"
+BOARD_CUSTOM_USB_CONTROLLER := ../../device/zte/warp/UsbController.cpp
+TARGET_USE_CUSTOM_LUN_FILE_PATH := "/sys/devices/platform/msm_hsusb/gadget/lun"
 BOARD_UMS_LUNFILE := "/sys/devices/platform/msm_hsusb/gadget/lun0/file"
